@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>VueJs project</title>
+	<link href="style.css" rel="stylesheet"/>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     <style>
+
+ *{
+     box-sizing:border-box;
+   }
+
+   .row { width:100%;
+
+    }
+   @media(min-width: 1200px){
+
+   	.col-lg-1, .col-lg-2 {
+   		float:left;
+   		border:1px solid green;
+   		 ;
+   	}
+   	.col-lg-1{ width:50%;} 	.col-lg-2{ width:50%;}
+   }
+
+   .rest{
+   	width:200px;
+   	height: 40px;
+	margin:0 650px 5px 650px;
+   }
+    </style>
+</head>
+<body>
+
+   <div id="vue-app">
+
+  
+
+     <button class="rest" v-on:click="restart"> Restart </button>
+
+       <div class="row">
+        <div class= "col-lg-1">
+      <h1> team A </h1>
+
+    
+
+      <!--bag image-->
+      <div id="bag" v-bind:class="{burst:ended3}"> 
+
+      </div>
+
+      <!--bag health> -->
+
+      <div id= "health"> 
+
+      <div v-bind:style="{width: health + '%'}"></div>
+
+      </div>
+
+      <!-- game controls-->
+
+      <div id="controls"> 
+      <button id="controls" v-on:click="punch" v-show="!ended"> Punch </button>
+      
+      </div>
+      
+      </div>
+
+
+      <div class= "col-lg-2">
+
+      <h1> team B </h1>
+
+      <!--bag image-->
+      <div id="bag" v-bind:class="{burst:ended1}"> 
+
+      </div>
+
+      <!--bag health> -->
+
+      <div id= "health"> 
+
+      <div v-bind:style="{width: health1 + '%'}"></div>
+
+      </div>
+
+      <!-- game controls-->
+    <div id="controls"> 
+      <button id="controls" v-on:click="punch1" v-show="!ended"> Punch </button>
+      
+      </div>
+
+      </div>
+      
+      </div>
+      
+   </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
